@@ -1,0 +1,10 @@
+@import "styles/color.scss";
+@import "styles/font.scss";
+
+.list-languages {
+	.language-item {
+		padding-left: 10px;
+		color: $color-3;
+		@include text-3;
+	}
+}

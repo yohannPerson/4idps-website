@@ -1,0 +1,35 @@
+@import 'styles/color.scss';
+@import 'styles/font.scss';
+
+.btn {
+	padding: 16px 24px;
+	border-radius: 40px;
+	border: none;
+	cursor: pointer;
+	@include text-4;
+	&.custom-1 {
+		color: $color-3;
+		background-color: $color-7;
+		&:hover {
+			background-color: $color-1;
+		}
+	}
+
+	&.custom-2 {
+		background-color: transparent;
+		border: 1px solid $color-3;
+		color: $color-3;
+		&:hover {
+			background-color: $color-7;
+			color: $color-3;
+			border: 1px solid $color-7;
+		}
+	}
+
+	&.custom-3 {
+		color: $color-3;
+		padding: 10px 16px;
+		border-radius: 25px;
+		background-color: #DA578D;
+	}
+}

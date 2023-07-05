@@ -1,0 +1,120 @@
+@import 'styles/color.scss';
+@import 'styles/other.scss';
+@import 'styles/font.scss';
+
+
+.main-nav {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+    max-width: $max-width-main;
+	left: 50%;
+    transform: translate(-50%, 0);
+	.top-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: $max-width-main;
+		height: 100%;
+		margin: auto;
+		.logo {
+            background-color: $color-3;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 20px;
+			img {
+				height: 50px;
+                padding: 20px;
+			}
+		}
+    }
+
+    .bottom-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.main-pages-list {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			height: 100%;
+			@include text-2;
+			.main-page {
+				padding-right: 30px;
+				position: relative;
+				display: flex;
+				align-items: center;
+                color: $color-3;
+				cursor: pointer;
+				&.current-page {
+					.main-page-link {
+						position: relative;
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: -10px;
+							left: 0;
+							height: 4px;
+							width: 100%;
+							background-color: $color-3;
+						}
+					}
+				}
+
+				.arrow {
+					position: relative;
+					width: 12px;
+					&:before, &:after {
+						content: "";
+						transition: 0.5s;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						width: 8px;
+						height: 2px;
+						background-color: $color-3;
+						transform: translate(0, -50%) rotate(45deg) ;
+					}
+
+					&:after {
+						right: -5px;
+						transform: translate(0, -50%) rotate(-45deg) ;
+					}
+				}
+				
+				.sub-pages-list {
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					.sub-pages-list-container {
+						margin-top: 30px;
+						border-radius: 5px;
+						background-color: $color-3;
+						@include text-3;
+						.sub-page {
+							padding: 12px 15px;
+							color: $color-1;
+							white-space: nowrap;
+						}
+					}
+				}
+
+				&:hover {
+					.arrow {
+						&:before {
+							transform: rotate(-45deg);
+						}
+	
+						&:after {
+							transform: rotate(45deg);
+						}
+					}
+
+					.sub-pages-list{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

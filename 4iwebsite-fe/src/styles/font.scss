@@ -1,0 +1,37 @@
+/* Text mixin list */
+@mixin text-1 {
+	font-family: 'Roboto';
+	font-size: 16px;
+	font-weight: 400;
+}
+
+@mixin text-2 {
+	font-family: 'Karla';
+	font-size: 16px;
+	font-weight: 400;
+}
+
+@mixin text-3 {
+	font-family: 'Karla';
+	font-size: 16px;
+	font-weight: 700;
+}
+
+@mixin text-4 {
+	font-family: 'Karla';
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/* Title mixin list */
+@mixin title-1 {
+	font-family: 'Karla';
+	font-size: 70px;
+	font-weight: 700;
+}
+
+@mixin title-2 {
+	font-family: 'Roboto';
+	font-size: 32px;
+	font-weight: 400;
+}
